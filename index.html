@@ -9,23 +9,23 @@
 </head>
 
 <body>
-    <!-- first container just holds the header -->
     <div class="container">
-        <div class="header">
-            <h1>Weather Dashboard</h1>
+        <h1 class="heading">Weather Dashboard</h1>
+        <div class="search-container">
+            <h2>Search for a City</h2>
+            <input type="text" id="cityInput" placeholder="Enter City Name">
+            <button id="searchButton">Search</button>
+        </div>
+        <div class="current-weather">
+            <h2>Current Weather</h2>
+            <div class="current-info" id="currentInfo"></div>
+        </div>
+        <div class="forecast">
+            <h2>5-Day Forecast</h2>
+            <div class="forecast-info" id="forecastInfo"></div>
         </div>
     </div>
-    <!-- container that holds 3 main elements -->
-    <div class="weather-container">
-        <div class="search-container">
-            <h5>Search For a City</h5>
-        </div>
-        <div class="current-forecast">
-            <h5>Current Forecast</h5>
-        </div>
-        <div class="five-day-forecast">
-            <h5>Five Day Forecast</h5>
-        </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
