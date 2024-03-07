@@ -3,7 +3,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const cityInput = document.getElementById("cityInput");
     const currentInfo = document.getElementById("currentInfo");
     const forecastInfo = document.getElementById("forecastInfo");
+    const recentSearchesContainer = document.getElementById("recentSearches");
     const apiKey = "6e511f1b761849d9639f41a927677cf6";
+
+    // Function to display recent searches
+    function displayRecentSearches(searches) {
+        recentSearchesContainer.innerHTML = "";
+        searches.forEach(search => {
+            const button = document.createElement("button");
+            button.textContent = search;
+            button.addEventListener("click", () => {
+                handleSearch(search);
+            });
+            recentSearchesContainer.appendChild(button);
+        });
+    }
+
+    // Function to save recent search to local storage
+    function saveRecentSearch(search) {
+        let searches = JSON.parse(localStorage.getItem("recentSearches")) || [];
+        if (!searches.includes(search)) {
+            searches.unshift(search);
+            localStorage.setItem("recentSearches", JSON.stringify(searches));
+            displayRecentSearches(searches);
+        }
+    }
+
+    // Load recent searches from local storage on page load
+    displayRecentSearches(JSON.parse(localStorage.getItem("recentSearches")) || []);
 
     searchButton.addEventListener("click", () => {
         const cityName = cityInput.value.trim();
@@ -40,6 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Fetch 5-day forecast data
         const forecastData = await fetchForecast(cityName);
         displayForecast(forecastData);
+
+        // Save search to recent searches
+        saveRecentSearch(cityName);
     }
 
     function displayCurrentWeather(data) {
