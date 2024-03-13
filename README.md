@@ -12,6 +12,8 @@
 
 ## [Description](#description)
 
+This is a Weather Forecast application that allows you to search a city and see it's current weather as well as a 5-day forecast. It uses local storage to save recent searches and it will reload the city weather information if you click the button under recent searches.
+
 ## [Installation](#installation)
 
 You can install this by copying the HTTP in the github repository. Please do not push your changes to this repository.
@@ -25,6 +27,8 @@ N/A
 Please do not contribute to this repository. You may fork this one and make your own.
 
 ## [Test](#test)
+
+There is no testing for this project.
 
 ## [License](#license)
 
