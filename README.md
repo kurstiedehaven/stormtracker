@@ -41,6 +41,9 @@ For additional questions, you can reach me through:
 - GitHub: [kurstiedehaven](https://github.com/kurstiedehaven)
 - Email: kurstiedehaven@gmail.com
 
+  
+![Screenshot 2024-03-12 at 8 43 14 PM](https://github.com/kurstiedehaven/stormtracker/assets/134163209/40dd44b9-44c5-4cb8-bbba-fe1c9b7a8912)
+
 ---
 
 You can reach me via email or on LinkedIn.
